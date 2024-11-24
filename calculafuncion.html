@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>RELACIONES</title>
+
+  <!-- slider stylesheet -->
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              RELACION
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">INICIO <span class="sr-only">(current)</span></a>
+                </li>
+                                <li class="nav-item">
+                  <a class="nav-link" href="defconjunto.html"> ¿QUE ES UN CONJUNTO? </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="defproducto.html"> ¿QUE ES UN PRODUCTO CARTESIANO? </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="calculaproducto.html"> CALCULAR PRODUCTO </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="calculafuncion.html"> RELACIONES </a>
+                </li>
+                                                <li class="nav-item">
+                  <a class="nav-link" href="defmodular.php"> ARITMETICA MODULAR </a>
+                </li>
+                                <li class="nav-item">
+                  <a class="nav-link" href="grafos.html"> GRAFOS </a>
+                </li>
+              </ul>
+              <div class="user_option">
+                <a href="">
+                  <img src="images/user.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- do section -->
+
+  <section class="do_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          UN POCO SOBRE LAS RELACIONES 
+        </h2>
+        <p>
+          En el contexto de estructuras discretas, como la teoría de grafos, la teoría de conjuntos y la teoría de números, las relaciones son fundamentales. Una relación entre dos conjuntos 𝐴 y 𝐵 es simplemente un conjunto de pares ordenados (𝑎,𝑏)(a,b), donde 𝑎 pertenece a 𝐴 y 𝑏 pertenece a 𝐵. Estos pares ordenados representan cómo los elementos de 𝐴 se relacionan con los elementos de 𝐵.
+          </p>
+          <p>
+          Relación de equivalencia: Una relación que es reflexiva, simétrica y transitiva se llama relación de equivalencia. Por ejemplo, la relación "ser congruente módulo 𝑛" en el conjunto de números enteros es una relación de equivalencia.
+</p>
+<p>
+          Relación de orden: Una relación que es reflexiva, antisimétrica (es decir, si (𝑎,𝑏) está en la relación, entonces (𝑏,𝑎) no lo está, a menos que 𝑎=𝑏), y transitiva es una relación de orden. Por ejemplo, la relación "ser menor que o igual a" en el conjunto de números reales es una relación de orden.
+
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="do_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h3>
+          ¿QUE NECESITAS?
+        </h3>
+        <p>
+          Es muy simple solo ingresa tus relaciones y obtendras el tipo de relacion, ¡ ES MUY FACIL !
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- end do section -->
+<section class="container">
+  <div class="form_container">
+    <h2>Ingrese Relaciones</h2>
+    <form action="procesar_relaciones.php" method="post">
+      <label for="relaciones">Relaciones (formato: 1,1; 2,2; 3,3; ...)</label>
+      <input type="text" id="relaciones" name="relaciones" required>
+      
+      <button type="submit">Calcular Propiedades</button>
+    </form>
+  </div>
+</section>
+
+
+<br>
+<br>
+<br>
+<br>
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; 2024 Todos los derechos reservados a Jaime Erick Pérez Romero
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- owl carousel script 
+    -->
+  <script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 0,
+      navText: [],
+      center: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+  </script>
+  <!-- end owl carousel script -->
+
+</body>
+
+</html>

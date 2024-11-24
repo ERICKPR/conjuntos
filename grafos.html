@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>GRAFOS</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <!-- vis.js stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              PRODUCTO CARTESIANO 
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">INICIO <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="defconjunto.html">¿QUE ES UN CONJUNTO?</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="defproducto.html">¿QUE ES UN PRODUCTO CARTESIANO?</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="calculaproducto.html">CALCULAR PRODUCTO</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="calculafuncion.html">RELACIONES</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="defmodular.php">ARITMETICA MODULAR</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="grafos.html">GRAFOS</a>
+                </li>
+              </ul>
+              <div class="user_option">
+                <a href="">
+                  <img src="images/user.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- who section -->
+  <section class="who_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="img-box">
+            <img src="images/grafo.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>GRAFOS</h2>
+            </div>
+            <p>
+              Un grafo es una estructura que consiste en un conjunto de objetos llamados vértices (o nodos) y un conjunto de pares de vértices llamados aristas (o ejes), que establecen conexiones entre los vértices. Los grafos se utilizan para modelar relaciones entre distintos elementos. Los grafos tienen numerosas aplicaciones en diversos campos, como ciencias de la computación, ingeniería, biología, física, y más.
+            </p>
+            <div>
+              <h5>Tipos de Grafos</h5>
+              <p>
+                --Grafos dirigidos: En estos grafos, las aristas tienen una dirección específica, lo que significa que la relación entre los vértices es unidireccional. Por ejemplo, en un grafo que representa las relaciones de "es padre de", la dirección de la arista indica la dirección de la relación.
+                <br>--Grafos no dirigidos: En estos grafos, las aristas no tienen una dirección específica, lo que significa que la relación entre los vértices es bidireccional. Por ejemplo, en un grafo que representa las conexiones de amistad entre personas, la falta de dirección en las aristas indica que la amistad es recíproca.
+                <br>--Grafos ponderados: En estos grafos, a cada arista se le asigna un peso o valor numérico que representa alguna medida de la relación entre los vértices conectados. Por ejemplo, en un grafo que modela rutas entre ciudades, el peso de una arista podría representar la distancia entre las ciudades.
+                <br>--Grafos etiquetados: En estos grafos, a los vértices o aristas se les asigna una etiqueta o nombre específico para identificarlos. Por ejemplo, en un grafo que representa una red de computadoras, los vértices podrían ser las computadoras y las aristas podrían ser las conexiones entre ellas, etiquetadas con los nombres de los dispositivos de red que las conectan.
+              </p>
+            </div>
+            <!-- Formulario para nodos y aristas -->
+            <div class="container">
+              <form action="procesa_grafo.php" method="post">
+                <h3>Añadir Nodos</h3>
+                <div id="nodos">
+                  <div class="form-group">
+                    <label for="nodo1">Nodo 1:</label>
+                    <input type="text" class="form-control" name="nodos[]" id="nodo1" required>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-secondary" onclick="agregarNodo()">Añadir otro nodo</button>
+                
+                <h3>Añadir Aristas</h3>
+                <div id="aristas">
+                  <div class="form-group">
+                    <label for="arista1">Arista 1:</label>
+                    <input type="text" class="form-control" name="aristas[]" id="arista1" required>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-secondary" onclick="agregarArista()">Añadir otra arista</button>
+                
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end who section -->
+
+  <!-- Grafo Container and Controls -->
+  <div class="container">
+    <div id="graph-container" style="width: 100%; height: 500px; border: 1px solid #ccc; margin-bottom: 20px;"></div>
+  </div>
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>&copy; 2024 Todos los derechos reservados a Jaime Erick Pérez Romero</p>
+  </section>
+  <!-- footer section -->
+
+  <!-- jQuery and Bootstrap scripts -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- Owl Carousel script -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- vis.js script -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <!-- Custom script for dynamic form fields -->
+  <script type="text/javascript">
+    function agregarNodo() {
+      var nodosDiv = document.getElementById('nodos');
+      var nuevoNodoIndex = nodosDiv.children.length + 1;
+      var nuevoNodo = document.createElement('div');
+      nuevoNodo.className = 'form-group';
+      nuevoNodo.innerHTML = `<label for="nodo${nuevoNodoIndex}">Nodo ${nuevoNodoIndex}:</label>
+                             <input type="text" class="form-control" name="nodos[]" id="nodo${nuevoNodoIndex}" required>`;
+      nodosDiv.appendChild(nuevoNodo);
+    }
+
+    function agregarArista() {
+      var aristasDiv = document.getElementById('aristas');
+      var nuevaAristaIndex = aristasDiv.children.length + 1;
+      var nuevaArista = document.createElement('div');
+      nuevaArista.className = 'form-group';
+      nuevaArista.innerHTML = `<label for="arista${nuevaAristaIndex}">Arista ${nuevaAristaIndex}:</label>
+                               <input type="text" class="form-control" name="aristas[]" id="arista${nuevaAristaIndex}" required>`;
+      aristasDiv.appendChild(nuevaArista);
+    }
+  </script>
+  <!-- Owl Carousel script -->
+  <script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 0,
+      navText: [],
+      center: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+  </script>
+  <!-- end owl carousel script -->
+
+</body>
+</html>
